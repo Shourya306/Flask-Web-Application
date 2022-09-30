@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profit Prediction</title>
+</head>
+<body>
+    <h1>Start Up Profit predictor</h1>
+    <p><i>Please make sure that all the fields are given input and ensure that for fields NY, FL, Cal the values should be either 0 or 1
+        And also please ensure that for fields NY, FL, Cal only one value should correspond to 1 and rest to 0
+    </i></p>
+    <form action="/predict" method="post">
+        <label for="R&D">R&D</label>
+        <input type="number" id="R&D" name="RD" required step="0.01">
+        <br><br>
+        <label for="Administration">Administration</label>
+        <input type="number" id="Administration" name = "Admin" required step="0.01">
+        <br><br>
+        <label for="Marketing">Marketing</label>
+        <input type="number" name="Marketing" id="Marketing" required step="0.01">
+        <br><br>
+        <label for="Cal">Cal</label>
+        <input type="number" id="Cal" name="Cal" min="0" max="1" required>
+        <br><br>
+        <label for="FL">FL</label>
+        <input type="number" id="FL" name="FL" min="0" max="1" required>
+        <br><br>
+        <label for="NY">NY</label>
+        <input type="number" id="NY" name="NY" min="0" max="1" required>
+        <br><br>
+        <button>Predict</button>
+    </form>
+</body>
+</html>
